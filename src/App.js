@@ -14,15 +14,14 @@ function App() {
 
 
   return (
-    <div className="App">
-
+    <div className="App" id="outer-container">
+      <div id="page-wrap">
+      <Menu pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
+      
       <Link to="/fragor"><button className='roundButtons'>Frågor</button></Link>
       <Link to="/tips"><button className='roundButtons' >tips</button></Link>
       <Link to="/"><button className='roundButtons' >Homepage</button></Link>
       
-      
-
-
 
           <Routes>
             <Route path="/" element={<Homepage/>}/>
@@ -35,18 +34,13 @@ function App() {
 
           </Routes>
 
-          
-
-
-
-
-        <Menu/>
+        
       <TopSection/>
       <BottomSection/>
 
       
 
-
+      </div>
     </div>
   );
 }
